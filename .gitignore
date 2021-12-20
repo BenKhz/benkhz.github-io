@@ -1,0 +1,4 @@
+.DS*
+package-lock*
+public/main.js
+node_modules
