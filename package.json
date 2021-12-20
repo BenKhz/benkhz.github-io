@@ -4,6 +4,8 @@
   "description": "SPA for use as Portfolio Site",
   "main": "index.js",
   "scripts": {
+    "start" : "nodemon index.js -w",
+    "build" : "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ben bernardy (@benkhz)",
