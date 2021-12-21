@@ -4,8 +4,8 @@
   "description": "SPA for use as Portfolio Site",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon index.js -w",
-    "build" : "webpack -w",
+    "start": "nodemon index.js -w",
+    "build": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ben bernardy (@benkhz)",
@@ -14,6 +14,7 @@
     "@babel/plugin-syntax-jsx": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
+    "@fullpage/react-fullpage": "^0.1.19",
     "babel-loader": "^8.2.3",
     "express": "^4.17.2",
     "react": "^17.0.2",
