@@ -1,10 +1,15 @@
 import React from "react";
 import ReactFullpage from '@fullpage/react-fullpage';
 
-import Section from "./components/Section";
+import Mainsail from "./components/Mainsail";
+import Showoff from "./components/Showoff";
+import Contact from "./components/Contact";
+// import SpeedNav from "./components/SpeedNav";
 
 export default function () {
   return (
+    <>
+    {/* <SpeedNav /> */}
     <ReactFullpage
       navigation
       licenseKey={null}
@@ -12,13 +17,16 @@ export default function () {
       scrollingSpeed={1250}
       render={({ state, fullpageApi }) => {
         return (
+
           <ReactFullpage.Wrapper>
-            <Section content="What's up?! My first section" name="one"/>
-            <Section content="Ahhhh... not much.. my second section!" name="two" />
-            <Section content="This the last one! Wow!" name="three"/>
+            <Mainsail content="Hi, my name's Ben!" name="mainsail"/>
+            <Showoff content="Ahhhh... not much.. my second section!" name="showoff" />
+            <Contact content="This the last one! Wow!" name="contact"/>
           </ReactFullpage.Wrapper>
+
         );
       }}
       />
+      </>
   )
 }
