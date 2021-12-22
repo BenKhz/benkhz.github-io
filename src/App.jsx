@@ -4,12 +4,12 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Mainsail from "./components/Mainsail";
 import Showoff from "./components/Showoff";
 import Contact from "./components/Contact";
-// import SpeedNav from "./components/SpeedNav";
+import SpeedNav from "./components/SpeedNav";
 
 export default function () {
   return (
     <>
-    {/* <SpeedNav /> */}
+    <SpeedNav />
     <ReactFullpage
       navigation
       licenseKey={null}
