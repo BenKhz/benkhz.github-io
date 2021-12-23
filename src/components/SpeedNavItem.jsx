@@ -6,22 +6,20 @@ function SpeedNavItem({childInfo, open}) {
     position: 'absolute',
     zIndex: '10000',
     borderRadius: '100%',
-    height: '4rem',
-    width: '4rem',
+    height: '10rem',
+    width: '10rem',
     backgroundColor: "darkgrey",
     color: "white",
     filter: "drop-shadow(0 0 0.25rem black)",
     textAlign: "center",
-    top: `${5*childInfo.position}rem`,
-    // right: `${5*childInfo.position}rem`,
-    transitionDelay: `${0.25*childInfo.position}s`
+    top: `${14 * Math.sin((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
+    right: `${-14 * Math.cos((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
+    transitionDelay: `${0.2*childInfo.position}s`
   }
 
   return (
-      <div className={`sDItem ${open ? "":"sD-invisible"}`} style={style} onClick={childInfo.onClick} id={childInfo.name}>
-        {`The cosine is : ${Math.cos((30 *childInfo.position) * (Math.PI /180))}`}
-
-      </div>
+      <a href={childInfo.href} target="_blank" className={`sDItem ${open ? "":"sD-invisible"}`} style={style} id={childInfo.name}>
+      </a>
   );
 }
 
