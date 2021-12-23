@@ -1,26 +1,36 @@
 .section {
   text-align:center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Bebas Neue', cursive;
   color:whitesmoke;
 }
 
-/* #nav {
-  position:absolute;
-  top: 50%;
-  z-index: 1000;
-} */
+.sDParent {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
 
-#one {
+.sDItemParent {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
 
 }
 
-#two {
-
+.sDItem {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
 }
 
-#three {
+.sD-rotated {
+  transform: rotate(180deg);
+}
 
+.sD-scaled {
+  transform: scale(2)
+}
+
+.sD-invisible {
+  opacity: 0;
 }
 
 .text-shadow-drop-left {

@@ -15,9 +15,8 @@ export default function () {
       licenseKey={null}
       sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
       scrollingSpeed={1250}
-      render={({ state, fullpageApi }) => {
+      render={() => {
         return (
-
           <ReactFullpage.Wrapper>
             <Mainsail content="Hi, my name's Ben!" name="mainsail"/>
             <Showoff content="Ahhhh... not much.. my second section!" name="showoff" />
