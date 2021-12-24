@@ -11,7 +11,7 @@ export default function () {
     <>
     <SpeedNav />
     <ReactFullpage
-      navigation
+      // navigation
       licenseKey={null}
       sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
       scrollingSpeed={1250}
