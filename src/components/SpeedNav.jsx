@@ -47,7 +47,7 @@ function SpeedNav(props) {
   }
 
   return (
-    <div className={`sDParent ${open ? "sD-rotated" : ""}`} style={baseStyle} onClick={() => setOpen(prev => !prev)}>
+    <div className={`sDParent ${open ? "" : ""}`} style={baseStyle} onClick={() => setOpen(prev => !prev)}>
       <div style={{ borderRadius: "100%", backgroundColor: "grey", height: "1rem", width: "1rem" }}></div>
 
       <div className={`sDItemParent ${open ? "" : ""}`}>

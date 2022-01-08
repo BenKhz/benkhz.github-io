@@ -4,7 +4,7 @@ function SpeedNavItem({childInfo, open}) {
 
   const style = {
     position: 'absolute',
-    zIndex: '10000',
+    zIndex: '-1000',
     borderRadius: '100%',
     height: '4.5rem',
     width: '4.5rem',
@@ -15,14 +15,17 @@ function SpeedNavItem({childInfo, open}) {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    top: `${7 * Math.sin((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
-    right: `${-7 * Math.cos((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
-    transitionDelay: `${0.2*childInfo.position}s`
+    top: `0px`,
+    right: `0px`,
+    transitionDelay: `${0.05*childInfo.position}s`
   }
-
+  const styleOpen = {
+    top: `${-7 * Math.sin((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
+    right: `${7 * Math.cos((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
+  }
   return (
-      <a href={childInfo.href} target="_blank" className={`sDItem ${open ? "":"sD-invisible"}`} style={style} id={childInfo.name}>
-        <div style={{transform: 'rotate(180deg)'}}>
+      <a href={childInfo.href} target="_blank" className={`sDItem ${open ? "":"sD-invisible disabled"}`} style={open ? {...style, ...styleOpen} : style} id={childInfo.name} >
+        <div>
           {childInfo.icon}
         </div>
       </a>

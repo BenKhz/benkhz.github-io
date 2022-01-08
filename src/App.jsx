@@ -11,16 +11,16 @@ export default function () {
     <>
     <SpeedNav />
     <ReactFullpage
-      // navigation
       licenseKey={null}
       sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
       scrollingSpeed={1250}
+      navigation
       render={() => {
         return (
           <ReactFullpage.Wrapper>
             <Mainsail content="Hi, my name's Ben!" name="mainsail"/>
-            <Showoff content="Ahhhh... not much.. my second section!" name="showoff" />
-            <Contact content="This the last one! Wow!" name="contact"/>
+            <Showoff content="Some of my Projects" name="showoff" />
+            <Contact content="Get in Touch!" name="contact"/>
           </ReactFullpage.Wrapper>
 
         );

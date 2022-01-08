@@ -1,8 +1,26 @@
+a.disabled {
+  pointer-events: none;
+  cursor:default;
+}
+
+.thought1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
 .section {
-  text-align:center;
+  text-align: center;
   font-size: 4rem;
   font-family: 'Bebas Neue', cursive;
   color:whitesmoke;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sDParent {
@@ -31,6 +49,7 @@
 
 .sD-invisible {
   opacity: 0;
+  display:none;
 }
 
 .text-shadow-drop-left {
