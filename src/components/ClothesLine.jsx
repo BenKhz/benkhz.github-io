@@ -11,7 +11,7 @@ function Clothesline(props) {
   const handleNextClick = () => {
     currCardInd === props.projects.length-1 ? setCardInd(0) : setCardInd(prev => prev + 1);
 }
-  const cards = props.projects.map((project, ind) => <ClothesLineItem index={ind} text={project.shortText} currCardInd={currCardInd} />)
+  const cards = props.projects.map((project, ind) => <ClothesLineItem index={ind} text={project.shortText} currCardInd={currCardInd} image={project.thumbUrl} />)
   return (
     <div className="clContainer" >
       <svg

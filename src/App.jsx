@@ -19,7 +19,7 @@ export default function () {
         return (
           <ReactFullpage.Wrapper>
             <Mainsail content="Hi, my name's Ben!" name="mainsail"/>
-            <Showoff content="Some of my Projects" name="showoff" />
+            <Showoff content="My favorite tech!" name="showoff" />
             <Contact content="Get in Touch!" name="contact"/>
           </ReactFullpage.Wrapper>
 
