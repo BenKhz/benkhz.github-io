@@ -3,8 +3,7 @@ import ClothesLineItem from './ClothesLineItem';
 
 function Clothesline(props) {
 
-  const projects = ['1'];
-  const cards = projects.map(project => <ClothesLineItem text={project} />)
+  const cards = props.projects.map(project => <ClothesLineItem text={project.shortText} />)
   return (
     <div className="clContainer" >
       <svg
@@ -19,7 +18,11 @@ function Clothesline(props) {
           strokeLinecap="round" fill="none"
           strokeLinejoin="round" />
       </svg>
+      <div style={{postion:'relative'}}>
+        <div style={{display:'flex', justifyContent:'center'}}>
       {cards}
+      </div>
+      </div>
       <svg
         style={{ position: 'relative', top: '0', right: '0'}}
         onClick={()=>{console.log("Clicked Forward Arrow")}}

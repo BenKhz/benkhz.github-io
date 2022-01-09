@@ -7,7 +7,6 @@ const ClothesLineItem = (props) => {
       <div className="clCard">
         {props.text}
       </div>
-
     </div>
   )
 }
