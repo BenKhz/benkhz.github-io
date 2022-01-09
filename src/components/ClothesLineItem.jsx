@@ -1,11 +1,11 @@
 import React from "react";
 
-const ClothesLineItem = (props) => {
+const ClothesLineItem = ({currCardInd, index, text}) => {
 
   return (
-    <div className="clItem">
+    <div className={`clItem ${index === currCardInd ? "" : "invisible"} ${index > currCardInd ? "prev":""} ${index < currCardInd ? "next":""}`}>
       <div className="clCard">
-        {props.text}
+        {text}
       </div>
     </div>
   )

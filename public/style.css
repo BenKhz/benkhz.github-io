@@ -71,7 +71,7 @@ a.disabled {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: all 1s;
+  transition: all .6s;
   transform-origin: bottom;
   position:absolute
 
@@ -87,7 +87,7 @@ a.disabled {
   border-color: #d1edff;
   min-width: 120px ;
   min-height: 180px;
-  transition: all 1s;
+  transition: all .3s;
 }
 .clItem::after{
   content:'';

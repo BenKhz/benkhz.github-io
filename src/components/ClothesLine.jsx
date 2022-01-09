@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ClothesLineItem from './ClothesLineItem';
 
 function Clothesline(props) {
 
-  const cards = props.projects.map(project => <ClothesLineItem text={project.shortText} />)
+  const [currCardInd, setCardInd] = useState(0)
+
+  const handlePrevClick = () => {
+    currCardInd === 0 ? setCardInd(props.projects.length-1) : setCardInd(prev => prev - 1);
+  }
+  const handleNextClick = () => {
+    currCardInd === props.projects.length-1 ? setCardInd(0) : setCardInd(prev => prev + 1);
+}
+  const cards = props.projects.map((project, ind) => <ClothesLineItem index={ind} text={project.shortText} currCardInd={currCardInd} />)
   return (
     <div className="clContainer" >
       <svg
-        style={{ position: 'relative', top: '0%', left: '0%' }}
-        onClick={()=>{console.log("Clicked Back Arrow")}}
+        style={{ position: 'relative', top: '0%', left: '0%', zIndex:'5' }}
+        onClick={handlePrevClick}
         height={'25vh'} width={'25vw'}
         viewBox="0 -3 10 10">
         <path
@@ -24,8 +32,8 @@ function Clothesline(props) {
       </div>
       </div>
       <svg
-        style={{ position: 'relative', top: '0', right: '0'}}
-        onClick={()=>{console.log("Clicked Forward Arrow")}}
+        style={{ position: 'relative', top: '0', right: '0', zIndex:'5'}}
+        onClick={handleNextClick}
         height={'25vh'} width={'25vw'}
         viewBox="0 2 10 10" >
         <path d="m 10 3 l 0 3 l -3 0 l 3 0 q -4 -5 -7 -1"
