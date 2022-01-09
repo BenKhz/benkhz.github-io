@@ -1,12 +1,14 @@
 import React from 'react';
+import ClothesLine from './ClothesLine';
 
 export default function (props) {
   return (
     <div id = {props.name} className="section">
       <div className="contents">
         <div className="text-shadow-pop-bottom">
-            {props.content}
+            <span>{props.content}</span>
         </div>
+        <ClothesLine />
         {/* <lottie-player
           src="https://assets3.lottiefiles.com/private_files/lf30_ucri8zme.json"
           autoplay
@@ -17,7 +19,6 @@ export default function (props) {
           src="https://assets7.lottiefiles.com/packages/lf20_tsl69e2f.json"
           autoplay
           loop
-          hover="true"
           style={{width: '400px', height: '400px'}}></lottie-player>
       </div>
     </div>
