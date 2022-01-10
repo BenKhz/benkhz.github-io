@@ -22,7 +22,6 @@ export default function () {
             <Showoff content="My favorite tech!" name="showoff" />
             <Contact content="Get in Touch!" name="contact"/>
           </ReactFullpage.Wrapper>
-
         );
       }}
       />
