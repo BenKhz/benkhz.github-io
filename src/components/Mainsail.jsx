@@ -1,26 +1,11 @@
 import React from 'react';
-import Particles from "react-tsparticles";
 import TypeWriterEffect from 'react-typewriter-effect'
-
-const TypeWriterFill = (props) => {
-  return (
-    <span
-        className="emoji"
-        role="img"
-        aria-label={props.label ? props.label : ""}
-        aria-hidden={props.label ? "false" : "true"}
-    >
-        {`${props.text} ${props.symbol}`}
-    </span>
-  )
-}
 
 export default function (props) {
   const meDescripts = [
-    "Fullstack Dev!",
     "RESTful API builder!",
-    "DBMS polyglot!",
-    "Bug Squasher!"
+    "Pinball Wizard!",
+    "and Fullstack Dev!",
   ]
   return (
     <div id={props.name} className="section">
@@ -29,12 +14,12 @@ export default function (props) {
           <div className="">
             <p> Hi, My name is <strong className="text-shadow-pop-bottom" style={{fontSize: '4rem'}}>Ben</strong> and I'm a ...</p>
           <TypeWriterEffect
+            style={{display:"flex", justifyContent:"center"}}
             startDelay={50}
             cursorColor="white"
             multiText={meDescripts}
             typeSpeed={100}
           />
-
           </div>
           <lottie-player
             id="firstLottie"

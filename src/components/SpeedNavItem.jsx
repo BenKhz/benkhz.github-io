@@ -1,3 +1,4 @@
+import { RotateRightTwoTone } from '@mui/icons-material';
 import React, {useState} from 'react';
 
 function SpeedNavItem({childInfo, open}) {
@@ -17,11 +18,13 @@ function SpeedNavItem({childInfo, open}) {
     alignItems: "center",
     top: `0px`,
     right: `0px`,
-    transitionDelay: `${0.05*childInfo.position}s`
+    transform: `rotate(0deg)`,
+    transitionDelay: `${0.1*childInfo.position}s`
   }
   const styleOpen = {
     top: `${-7 * Math.sin((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
     right: `${7 * Math.cos((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
+    transform: `rotate(360deg)`
   }
   return (
       <a href={childInfo.href} target="_blank" className={`sDItem ${open ? "":"sD-invisible disabled"}`} style={open ? {...style, ...styleOpen} : style} id={childInfo.name} >
