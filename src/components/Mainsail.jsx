@@ -12,14 +12,14 @@ export default function (props) {
       <div className="appear" >
         <div className="contents">
           <div className="">
-            <p> Hi, My name is <strong className="text-shadow-pop-bottom" style={{fontSize: '4rem'}}>Ben</strong> and I'm a ...</p>
-          <TypeWriterEffect
-            style={{display:"flex", justifyContent:"center"}}
-            startDelay={50}
-            cursorColor="white"
-            multiText={meDescripts}
-            typeSpeed={100}
-          />
+            <p> Hi, My name is <strong className="text-shadow-pop-bottom" style={{ fontSize: '4rem' }}>Ben</strong> and I'm a ...</p>
+            <TypeWriterEffect
+              style={{ display: "flex", justifyContent: "center" }}
+              startDelay={50}
+              cursorColor="white"
+              multiText={meDescripts}
+              typeSpeed={100}
+            />
           </div>
           <lottie-player
             id="firstLottie"

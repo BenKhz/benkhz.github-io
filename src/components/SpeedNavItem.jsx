@@ -1,11 +1,12 @@
 import { RotateRightTwoTone } from '@mui/icons-material';
 import React, {useState} from 'react';
 
-function SpeedNavItem({childInfo, open}) {
+function SpeedNavItem({childInfo, open, slots}) {
+
+  const angle = 360/(slots - 2);
 
   const style = {
     position: 'absolute',
-    zIndex: '-1000',
     borderRadius: '100%',
     height: '4.5rem',
     width: '4.5rem',
@@ -22,8 +23,8 @@ function SpeedNavItem({childInfo, open}) {
     transitionDelay: `${0.1*childInfo.position}s`
   }
   const styleOpen = {
-    top: `${-7 * Math.sin((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
-    right: `${7 * Math.cos((childInfo.position * 22.5) * (Math.PI / 180))}rem`,
+    top: `${-7 * Math.sin((childInfo.position * angle) * (Math.PI / 180))}rem`,
+    right: `${7 * Math.cos((childInfo.position * angle) * (Math.PI / 180))}rem`,
     transform: `rotate(360deg)`
   }
   return (

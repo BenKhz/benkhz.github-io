@@ -6,10 +6,18 @@ import Showoff from "./components/Showoff";
 import Contact from "./components/Contact";
 import SpeedNav from "./components/SpeedNav";
 
+// import GitHubIcon from '@mui/icons-material/GitHub';
+
 export default function () {
+  // const links = [{
+  //   name: "icon1",
+  //   icon: <GitHubIcon fontSize='large' />,
+  //   position: 0,
+  //   href: "https://github.com/BenKhz"
+  // }]
   return (
     <>
-    <SpeedNav />
+    <SpeedNav slotNum={10}/>
     <ReactFullpage
       licenseKey={null}
       sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
@@ -22,7 +30,6 @@ export default function () {
             <Showoff content="My favorite tech!" name="showoff" />
             <Contact content="Get in Touch!" name="contact"/>
           </ReactFullpage.Wrapper>
-
         );
       }}
       />
