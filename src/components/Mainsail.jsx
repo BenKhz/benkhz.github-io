@@ -4,10 +4,8 @@ import TypeWriterEffect from 'react-typewriter-effect'
 export default function (props) {
   const meDescripts = [
     "RESTful API builder!",
-    "DBMS polyglot!",
-    "Bug Squasher!",
     "Pinball Wizard!",
-    "Fullstack Dev!",
+    "and Fullstack Dev!",
   ]
   return (
     <div id={props.name} className="section">
@@ -22,7 +20,6 @@ export default function (props) {
             multiText={meDescripts}
             typeSpeed={100}
           />
-
           </div>
           <lottie-player
             id="firstLottie"

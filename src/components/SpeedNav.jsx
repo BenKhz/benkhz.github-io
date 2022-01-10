@@ -42,14 +42,13 @@ function SpeedNav(props) {
     filter: "drop-shadow(0 0 0.75rem black)",
     display: "flex",
     flexFlow: "column",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center"
   }
 
   return (
     <div className={`sDParent ${open ? "" : ""}`} style={baseStyle} onClick={() => setOpen(prev => !prev)}>
-      <div style={{ borderRadius: "100%", backgroundColor: "grey", height: "1rem", width: "1rem" }}></div>
-
+      <div style={{fontSize:'3rem', transition: "all 750ms cubic-bezier(1,-0.32, 0.1, 0.15)", transform: open ? "rotate(45deg)":"" }}>+</div>
       <div className={`sDItemParent ${open ? "" : ""}`}>
         {links.map((link, ind) => <SpeedNavItem key={ind} open={open} childInfo={link} />)}
       </div>
