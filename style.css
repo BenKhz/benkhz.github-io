@@ -31,33 +31,40 @@ a.disabled {
 /* SpeedDial CSS */
 /*  */
 
-.sDParent {
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 1s;
+.SD {
+  background-color: gray;
+  color: white;
+  transition: all 750ms 0s cubic-bezier(0.4, 0.28, 0.2, 2.16);
 }
 
-.sDItemParent {
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 1s;
+.SD-contain {
 
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 750ms 0s cubic-bezier(0.4, 0.28, 0.2, 2.16);
+}
+.SD-badge{
+  border-radius: 100%;
+  width: 3.5em;
+  height: 3.5em;
+}
+.SD-active {
+  box-shadow: 0 0 0 0.5em #3c3c3cd4;
+  opacity: 0.9;
+  transform:rotate(135deg)
 }
 
-.sDItem {
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 1s;
-}
-
-.sD-rotated {
-  transform: rotate(180deg);
-}
-
-.sD-scaled {
-  transform: scale(1)
-}
-
-.sD-invisible {
-  opacity: 0;
-  display:none;
+.SD-puckContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*  */
 /* ClothesLine CSS */
