@@ -6,6 +6,9 @@ import Clothesline from "./components/ClothesLine";
 
 export default function () {
   return (
-    <Clothesline />
+    <React.StrictMode>
+      <Clothesline />
+    </React.StrictMode>
   )
+
 }
